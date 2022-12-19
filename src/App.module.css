@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+  background-color: aqua;
+}
+
+.headerContainer {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: red;
+}
+
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+  background-color: black;
+}
+
+.leftSide {
+  flex: 1;
+  margin-right: 40px;
+  background-color: white;
+}
+
+.rightSide {
+  flex: 1;
+  margin-left: 40px;
+  background-color: yellow;
+}
