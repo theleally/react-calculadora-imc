@@ -69,8 +69,21 @@ body {
   opacity: 0.8;
 }
 
-.rightSide {
+.container .rightSide {
   flex: 1;
   margin-left: 40px;
+  display: flex;
   background-color: yellow;
+}
+
+.container .rightSide .grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  background-color: aquamarine;
+}
+
+.container .rightSide .grid .categories {
+  background-color: darkgreen;
 }
