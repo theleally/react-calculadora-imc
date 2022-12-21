@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./App.module.css";
 import logoImage from "./assets/powered.png";
 import { categories, calculateIMC } from "./helpers/imc";
+import { GridItem } from "./components/GridItem";
 
 const App = () => {
   const [heightField, setHeightField] = useState<number>(0);
@@ -46,9 +47,7 @@ const App = () => {
         <div className={styles.rightSide}>
           <div className={styles.grid}>
             {categories.map((item, key) => (
-              <div className={styles.categories} key={key}>
-                {item.name}
-              </div>
+              <GridItem key={key} item={item} />
             ))}
           </div>
         </div>
