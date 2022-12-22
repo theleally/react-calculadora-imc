@@ -4,30 +4,26 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: blueviolet;
 }
 
 .main {
-  background-color: aqua;
+  padding-bottom: 50px;
 }
 
 .headerContainer {
   max-width: 900px;
   margin: 40px auto;
-  background-color: red;
 }
 
 .container {
   display: flex;
   max-width: 900px;
   margin: auto;
-  background-color: black;
 }
 
 .container .leftSide {
   flex: 1;
   margin-right: 40px;
-  background-color: white;
 }
 
 .container .leftSide h1 {
@@ -81,7 +77,6 @@ body {
   flex: 1;
   margin-left: 40px;
   display: flex;
-  background-color: yellow;
 }
 
 .container .rightSide .grid {
@@ -89,7 +84,6 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  background-color: aquamarine;
 }
 
 .container .rightSide .rightBig {
@@ -114,4 +108,36 @@ body {
 
 .container .rightSide .rightBig .rightArrow:hover {
   opacity: 0.8;
+}
+
+@media (max-width: 770px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .container {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+
+  .container .leftSide {
+    margin-right: 0;
+  }
+
+  .container .rightSide {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  .container .rightSide .rightBig .rightArrow {
+    margin-left: 0;
+    margin-top: 0;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .container .rightSide .grid {
+    grid-template-columns: 1fr;
+  }
 }
