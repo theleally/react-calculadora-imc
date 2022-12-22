@@ -18,8 +18,9 @@ export const calculateIMC = (weight: number, height: number) => {
 
   for (let i in categories) {
     if (imc >= categories[i].imc[0] && imc <= categories[i].imc[1]) {
-      categories[i].yourImc = imc;
-      return categories[i];
+      let categoryCopy: Category = { ...categories[i] };
+      categoryCopy.yourImc = parseFloat(imc.toFixed(2));
+      return categoryCopy;
     }
   }
   return null;
